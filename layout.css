@@ -1,0 +1,37 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 80%;
+  margin: 1rem auto;
+}
+ol {
+  font-size: 1.6rem;
+}
+ol li {
+  margin-block-end: 1rem;
+  padding: 1rem;
+  border-radius: 0 0 2rem 0;
+}
+.parillinen li:nth-child(even) {
+  background-color: #e0eac5;
+}
+.pariton li:nth-child(odd) {
+  background-color: #e0eac5;
+}
+/* Muotoillaan sectionit rinnakkain flexin avulla */
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* motivaatio */
+}
+/* vain välittömät lapset, ei lapsenlapset */
+.parent > * {
+  flex-grow: 1;
+  flex-basis: 0; /* lapsen minimi leveys */
+}
+.parent .parillinen {
+  flex-grow: 2; /* tällä lapsella tuplaleveys */
+  margin-inline-end: 1rem;
+}
